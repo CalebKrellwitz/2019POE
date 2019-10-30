@@ -41,8 +41,6 @@ int main()
 {
 	string input = "";	
 
-	cout << "Please enter the value to calculate as zero." << endl;
-
 	while (true)
 	{
 		cout << "Please enter a gravitational constant: ";
@@ -53,30 +51,6 @@ int main()
 		if (myStream >> gravity_const)
 			break;
 		cout << "Invalid gravitational constant, please try again" << endl;
-	}
-
-	while (true)
-	{
-		cout << "Please enter a launch angle: ";
-		getline(cin, input);
-
-		// This code converts from string to number safely.
-		stringstream myStream(input);
-		if (myStream >> launch_angle)
-			break;
-		cout << "Invalid launch angle, please try again" << endl;
-	}
-
-	while (true)
-	{
-		cout << "Please enter a projectile velocity: ";
-		getline(cin, input);
-
-		// This code converts from string to number safely.
-		stringstream myStream(input);
-		if (myStream >> projectile_vel)
-			break;
-		cout << "Invalid projectile velocity, please try again" << endl;
 	}
 
 	while (true)
@@ -101,6 +75,32 @@ int main()
 		if (myStream >> target_y)
 			break;
 		cout << "Invalid target Y coordinate, please try again" << endl;
+	}
+
+	cout << endl << "Please enter zero for the value you want to calculate." << endl << endl;
+
+	while (true)
+	{
+		cout << "Please enter a launch angle: ";
+		getline(cin, input);
+
+		// This code converts from string to number safely.
+		stringstream myStream(input);
+		if (myStream >> launch_angle)
+			break;
+		cout << "Invalid launch angle, please try again" << endl;
+	}
+
+	while (true)
+	{
+		cout << "Please enter a projectile velocity: ";
+		getline(cin, input);
+
+		// This code converts from string to number safely.
+		stringstream myStream(input);
+		if (myStream >> projectile_vel)
+			break;
+		cout << "Invalid projectile velocity, please try again" << endl;
 	}
 
 	if(launch_angle == 0)
